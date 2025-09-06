@@ -14,6 +14,7 @@ public class ApiApplication {
 		SpringApplication.run(ApiApplication.class, args);
 	}
 	
+	//Método de teste
 	@GetMapping("/eco/{msg}")
 	public String eco(
 			@PathVariable("msg") String msg) {
