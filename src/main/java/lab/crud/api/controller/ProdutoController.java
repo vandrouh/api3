@@ -2,6 +2,7 @@ package lab.crud.api.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import lab.crud.api.model.Produto;
@@ -11,9 +12,10 @@ public class ProdutoController {
 
 	//@RequestMapping(method = RequestMethod.POST, path = "/produto")
 	@PostMapping("/produto")
-	public ResponseEntity<Produto> novo(Produto produto) {
+	public ResponseEntity<Produto> novo(@RequestBody Produto produto) {
 		
-		
+		System.out.println(produto.getDataCriacao().getMonthValue());
+		System.out.println(produto.toString());
 		return null;
 	}
 	
